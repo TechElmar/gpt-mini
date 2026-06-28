@@ -1,0 +1,9 @@
+# Claude Code working dir
+.claude/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.zip

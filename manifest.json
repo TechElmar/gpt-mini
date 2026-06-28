@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GPT Mini",
+  "version": "3.0.0",
+  "description": "Highlight text, right-click, and get quick AI answers from a free on-device model — no API key, no cloud.",
+  "action": { "default_title": "GPT Mini — click to open the panel" },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["storage", "contextMenus", "activeTab", "scripting", "offscreen"],
+  "host_permissions": [
+    "https://huggingface.co/*",
+    "https://*.huggingface.co/*",
+    "https://*.hf.co/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self' https://huggingface.co https://*.huggingface.co https://*.hf.co data: blob:; worker-src 'self';"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "options.html"
+}
